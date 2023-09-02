@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+/*raiz*/
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg); 
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  
+
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg); 
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color:rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+  background-image: linear-gradient(to left, #e9dfde, #eaa9a2 );
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+#container {
+  width: 360px;
+  /* ou pode usar margin: auto */
+  margin: 10px auto 0px;
+
+
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  
+}
+
+#profile p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  /*alinhamneto flexivel entre elas*/
+  flex-direction: column;
+  /*forma uma coluna*/
+  gap: 16px;
+  /*da o espaço entre os elemento*/
+  padding: 24px 0px;
+}
+
+ul li a {
+  display: flex;
+  /*ele cria uma linha virtual no meio do container, no da linha se chama men(eixo principal)*/
+  align-items: center;
+  /*ele alinha os intes ao centro men */
+  justify-content: center;
+  /*ele alinha os intes na horizontal*/
+
+  background:var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+
+
+  border-radius: 8px;
+  padding: 16px 24px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  /* resposanvel pela as linha, "o none" é para remover as linhas*/
+  font-weight: 500;
+  /* e a fonte do elemento com o peso de 500*/
+
+  transition: background 0.2s;
+  /* tem a transmissão de 2s*/
+}
+
+/* pseudo-selector*/
+/*responsavel quando desliza o mouse sobre o container*/
+/*ativa o fundo quando passa o mouse*/
+ul li a:hover {
+  background: var(--suface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* social links */
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+/*ativa o fundo quando passa o mouse*/
+#social-links a:hover {
+  background: var(--highlight-color);
+
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
